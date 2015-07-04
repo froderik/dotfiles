@@ -32,3 +32,6 @@
 
 ;; HAML
 (require 'haml-mode)
+
+;; enable projectile
+(projectile-global-mode)
