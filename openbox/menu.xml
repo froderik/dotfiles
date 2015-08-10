@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+	<menu id="apps-net-menu" label="internets">
+		<item label="firefox">
+			<action name="Execute">
+				<command>firefox</command>
+			</action>
+		</item>
+		<item label="chromium">
+			<action name="Execute">
+				<command>chromium</command>
+			</action>
+		</item>
+		<item label="thunderbird">
+			<action name="Execute">
+				<command>thunderbird</command>
+			</action>
+		</item>
+	</menu>
+	<menu id="apps-fun-menu" label="fun">
+		<item label="steam">
+			<action name="Execute">
+				<command>steam</command>
+			</action>
+		</item>
+	</menu>
+	<menu id="apps-office-menu" label="big business">
+		<item label="libre">
+			<action name="Execute">
+				<command>libreoffice</command>
+			</action>
+		</item>
+		<item label="evince">
+			<action name="Execute">
+				<command>evince</command>
+			</action>
+		</item>
+	</menu>
+	<menu id="system-menu" label="conf">
+		<item label="Openbox Configuration Manager">
+			<action name="Execute">
+				<command>obconf</command>
+				<startupnotify>
+					<enabled>yes</enabled>
+				</startupnotify>
+			</action>
+		</item>
+		<item label="lxappearance">
+			<action name="Execute">
+				<command>lxappearance</command>
+			</action>
+		</item>
+	</menu>
+	<menu id="root-menu" label="Openbox 3">
+		<item label="command line">
+			<action name="Execute">
+				<command>lxterminal</command>
+			</action>
+		</item>
+		<separator label="stuff"/>
+		<menu id="apps-net-menu"/>
+		<menu id="apps-office-menu"/>
+		<menu id="apps-fun-menu"/>
+		<separator label="system"/>
+		<menu id="system-menu"/>
+		<separator/>
+		<item label="Log Out">
+			<action name="Exit">
+				<prompt>yes</prompt>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>
