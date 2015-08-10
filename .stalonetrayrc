@@ -1,0 +1,7 @@
+icon_size 24
+kludges force_icons_size
+dockapp_mode simple
+transparent true
+sticky true
+background "#333"
+
