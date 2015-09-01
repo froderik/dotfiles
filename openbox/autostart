@@ -9,6 +9,6 @@ lxterminal &
 dropboxd &
 xscreensaver &
 stalonetray --dockapp-mode simple & 
-nm-applet &
+cmst -m &
 volumeicon &
 
