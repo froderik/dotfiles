@@ -39,7 +39,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Taqua</name>
+    <name>Artwiz-boxed</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -54,17 +54,17 @@
     <keepBorder>no</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>Courier New</name>
-      <size>10</size>
+      <name>monofur</name>
+      <size>14</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>Courier New</name>
-      <size>7</size>
+      <name>monofur</name>
+      <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -72,39 +72,39 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>sans</name>
+      <name>monofur</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>sans</name>
+      <name>monofur</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>normal</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>sans</name>
+      <name>monofur</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>sans</name>
+      <name>monofur</name>
       <size>9</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
   </theme>
@@ -315,7 +315,7 @@
     <!-- Keybindings for running applications -->
     <keybind key="W-e">
       <action name="Execute">
-        <command>nemo</command>
+        <command>nemo --no-desktop</command>
       </action>
     </keybind>
     <keybind key="W-l">
@@ -326,6 +326,11 @@
     <keybind key="W-u">
       <action name="Execute">
         <command>/home/ruben/.screenlayout/athome.sh</command>
+      </action>
+    </keybind>
+    <keybind key="W-p">
+      <action name="Execute">
+        <command>/home/ruben/.screenlayout/eniro.sh</command>
       </action>
     </keybind>
     <keybind key="W-x">
@@ -346,9 +351,19 @@
         <command>lxterminal</command>
       </action>
     </keybind>
+    <keybind key="W-i">
+      <action name="Execute">
+        <command>idea.sh</command>
+      </action>
+    </keybind>
     <keybind key="W-f">
       <action name="Execute">
         <command>firefox</command>
+      </action>
+    </keybind>
+    <keybind key="W-h">
+      <action name="Execute">
+        <command>chromium</command>
       </action>
     </keybind>
     <keybind key="W-t">
@@ -356,11 +371,15 @@
         <command>thunderbird</command>
       </action>
     </keybind>
-    <keybind key="W-m">
-      <action name="ToggleMaximize" />
+    <keybind key="W-y">
+      <action name="Execute">
+        <command>skype</command>
+      </action>
     </keybind>
-
-<!-- Screenshot -->
+    <keybind key="W-m">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <!-- Screenshot -->
     <keybind key="Print">
       <action name="Execute">
         <command>sh -c "import -window root ~/Screenshots/$(date '+%Y%m%d-%H%M%S').png"</command>
@@ -439,7 +458,7 @@
         <action name="Move"/>
       </mousebind>
       <mousebind button="Left" action="DoubleClick">
-        <action name="ToggleMaximize"/>
+        <action xmlns="http://openbox.org/3.4/rc" name="ToggleMaximize"/>
       </mousebind>
       <mousebind button="Up" action="Click">
         <action name="if">
